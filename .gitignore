@@ -32,3 +32,5 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+report_response_example.json
