@@ -4,7 +4,7 @@ import BookingList from '../components/BookingList';
 import styles from '../styles/Home.module.css'
 
 
-export default function Home({bookings}) {
+export default function Home({bookings, cancellations}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +13,7 @@ export default function Home({bookings}) {
       </Head>
 
       <main>
-        <BookingList bookings={bookings} />
+        <BookingList bookings={bookings, cancellations} />
       </main>
     </div>
   )
@@ -21,11 +21,13 @@ export default function Home({bookings}) {
 
 export const getStaticProps = async () => {
     const res = await fetch(`${server}/api/bookings`)
+    const res2 = await fetch(`${server}/api/cancellations`)
     const bookings = await res.json()
+    const cancellations = await res2.json();
 
     return {
         props: {
-            bookings
+            bookings, cancellations
         }
     }
 }
