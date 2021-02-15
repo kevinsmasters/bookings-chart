@@ -63,17 +63,22 @@ const BookingList = ({bookings, cancellations}) =>{
     }
 
     const data = {
-      labels: ["January", "February", "March", "April", "May"],
+      labels: days,
       datasets: [
         {
-          label: "Drippies",
-          fill: false,
-          lineTension: 0.5,
-          backgroundColor: "rgba(75,192,192,1)",
-          borderColor: "rgba(0,0,0,1)",
-          borderWidth: 2,
-          data: bookingTotal
-        }
+          label: 'Bookings',
+          data: bookingTotal,
+          borderColor: "#1E90FF",
+          borderWidth: 3,
+          fill: false
+        },
+        {
+          label: 'Cancellations',
+          data: cancelTotal,
+          borderColor: "#df4248",
+          borderWidth: 3,
+          fill: false
+        },
       ]
     };
 
@@ -81,15 +86,33 @@ const BookingList = ({bookings, cancellations}) =>{
         <div>
         <Line
           data={data}
+          height={500}
+          width={900}
           options={{
-            title: {
-              display: true,
-              text: "Average Rainfall per month",
-              fontSize: 20
-            },
+            spanGaps: true,
             legend: {
-              display: true,
-              position: "right"
+              display: true
+            },
+            scales: {
+              xAxes: [{
+                display: true
+              }],
+              yAxes: [{
+                  scaleLabel: {
+                      display: true,
+                      labelString: 'USD'
+                  },
+                display: true,
+                ticks: {
+                    // Include a dollar sign in the ticks
+                    callback: function(value, index, values) {
+                        value = value.toString();
+                        value = value.split(/(?=(?:...)*$)/);
+                        value = value.join(',');
+                        return '$' + value;
+                    }
+                }
+              }],
             }
           }}
         />

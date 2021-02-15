@@ -13,7 +13,9 @@ export default function Home({bookings, cancellations}) {
       </Head>
 
       <main>
-        <BookingList bookings={bookings, cancellations} />
+        <div className="container mx-auto">
+            <BookingList bookings={bookings, cancellations} />
+        </div>
       </main>
     </div>
   )
