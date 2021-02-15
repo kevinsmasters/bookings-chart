@@ -4,7 +4,7 @@ import BookingList from '../components/BookingList';
 import styles from '../styles/Home.module.css'
 
 
-export default function Home({bookings, cancellations}) {
+export default function Home({numbers}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +14,7 @@ export default function Home({bookings, cancellations}) {
 
       <main>
         <div className="container mx-auto">
-            <BookingList bookings={bookings, cancellations} />
+            <BookingList numbers={numbers} />
         </div>
       </main>
     </div>
@@ -22,14 +22,12 @@ export default function Home({bookings, cancellations}) {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch(`${server}/api/bookings`)
-    const res2 = await fetch(`${server}/api/cancellations`)
-    const bookings = await res.json()
-    const cancellations = await res2.json();
+    const res = await fetch(`${server}/api/numbers`)
+    const numbers = await res.json()
 
     return {
         props: {
-            bookings, cancellations
+            numbers
         }
     }
 }

@@ -1,8 +1,13 @@
 import BookingItem from './BookingItem'
 import { Line } from "react-chartjs-2";
-const BookingList = ({bookings, cancellations}) =>{
+const BookingList = ({numbers}) =>{
 
+console.log(numbers);
     let dailyArr = [];
+
+    const cancellations = numbers.cancellations.data;
+
+    const bookings = numbers.bookings.data;
 
     for (let item in bookings) {
         let tempItem = {date: "",booking: 0};
