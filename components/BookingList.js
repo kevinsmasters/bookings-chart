@@ -1,8 +1,6 @@
-import BookingItem from './BookingItem'
 import { Line } from "react-chartjs-2";
 const BookingList = ({numbers}) =>{
 
-console.log(numbers);
     let dailyArr = [];
 
     const cancellations = numbers.cancellations.data;
@@ -73,14 +71,17 @@ console.log(numbers);
         {
           label: 'Bookings',
           data: bookingTotal,
-          borderColor: "#1E90FF",
+          backgroundColor: 'rgba(30,144,255,1)',
+          borderColor: 'rgba(30,144,255,1)',
+          lineTension: 0.5,
           borderWidth: 3,
           fill: false
         },
         {
           label: 'Cancellations',
           data: cancelTotal,
-          borderColor: "#df4248",
+          backgroundColor: 'rgba(223,66,72,1)',
+          borderColor: 'rgba(223,66,72,1)',
           borderWidth: 3,
           fill: false
         },
