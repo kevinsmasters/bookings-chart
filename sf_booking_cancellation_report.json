@@ -1,10 +1,10 @@
 {
-  "created_on" : "2021-02-10T18:55:13.010Z",
+  "created_on" : "2021-02-16T17:55:14.222Z",
   "cancellations" : {
     "report_id" : "00O4M000004qIfLUAU",
     "report_name" : "This week's cancellations",
-    "total_amount" : 497349,
-    "total_count" : 316,
+    "total_amount" : 543277,
+    "total_count" : 353,
     "data" : [
       {
         "label" : "1/9/2021",
@@ -33,16 +33,21 @@
       },
       {
         "label" : "2/13/2021",
-        "amount" : 50918,
-        "count" : 31
+        "amount" : 77569,
+        "count" : 57
+      },
+      {
+        "label" : "2/20/2021",
+        "amount" : 19277,
+        "count" : 11
       }
     ]
   },
   "bookings" : {
     "report_id" : "00O4M000004qIfBUAU",
     "report_name" : "Bookings this week",
-    "total_amount" : 10113450,
-    "total_count" : 9606,
+    "total_amount" : 11088944,
+    "total_count" : 10827,
     "data" : [
       {
         "label" : "1/9/2021",
@@ -62,17 +67,22 @@
       {
         "label" : "1/30/2021",
         "amount" : 1501926,
-        "count" : 1599
+        "count" : 1601
       },
       {
         "label" : "2/6/2021",
-        "amount" : 1839866,
-        "count" : 1648
+        "amount" : 1817180,
+        "count" : 1651
       },
       {
         "label" : "2/13/2021",
-        "amount" : 1111267,
-        "count" : 781
+        "amount" : 1750432,
+        "count" : 1652
+      },
+      {
+        "label" : "2/20/2021",
+        "amount" : 359016,
+        "count" : 345
       }
     ]
   }

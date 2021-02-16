@@ -70,12 +70,11 @@ const BookingList = ({numbers}) =>{
       datasets: [
         {
           label: 'Bookings',
-          data: bookingTotal,
-          backgroundColor: 'rgba(30,144,255,1)',
-          borderColor: 'rgba(30,144,255,1)',
-          lineTension: 0.5,
+          backgroundColor: '#5d205b',
+          borderColor: '#5d205b',
           borderWidth: 3,
-          fill: false
+          fill: false,
+          data: bookingTotal
         },
         {
           label: 'Cancellations',
