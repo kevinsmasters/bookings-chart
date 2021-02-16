@@ -34,3 +34,4 @@ yarn-error.log*
 .vercel
 
 report_response_example.json
+sf_booking_cancellation_report.json

@@ -22,7 +22,8 @@ export default function Home({numbers}) {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch(`${server}/api/numbers`)
+    const res = await fetch(`localhost/sf_booking_cancellation_report.json`)
+
     const numbers = await res.json()
 
     return {
@@ -31,3 +32,14 @@ export const getStaticProps = async () => {
         }
     }
 }
+
+// export const getStaticProps = async () => {
+//     const res = await fetch(`${server}/api/numbers`)
+//     const numbers = await res.json()
+//
+//     return {
+//         props: {
+//             numbers
+//         }
+//     }
+// }

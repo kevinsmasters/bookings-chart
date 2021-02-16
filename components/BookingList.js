@@ -1,6 +1,6 @@
 import { Line } from "react-chartjs-2";
 const BookingList = ({numbers}) =>{
-
+    
     let dailyArr = [];
 
     const cancellations = numbers.cancellations.data;
